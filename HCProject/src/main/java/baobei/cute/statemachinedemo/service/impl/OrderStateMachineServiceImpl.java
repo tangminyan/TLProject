@@ -29,7 +29,7 @@ public class OrderStateMachineServiceImpl implements OrderStateMachineService {
     @Override
     public String createOrders(Integer orderId) {
         if(!ObjectUtils.isEmpty(orderRepository.findByOrderId(orderId))) {
-            return "the orderId is exist";
+            return "the orderId is already exist";
         }
         String uuId = RandomStringUtils.randomAlphanumeric(9);
         StateMachine<OrderStatus, OrderStetusChangeEvent> stateMachine = machineFactory.getStateMachine(uuId);
