@@ -100,6 +100,7 @@ public class RabbitMqConfig {
             public void onMessage(Message message, Channel channel) throws Exception {
                 byte[] body = message.getBody();
                 System.out.println("接收消息：" + new String(body));
+                //通知服务端消息已经投递
                 channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);
             }
         });
