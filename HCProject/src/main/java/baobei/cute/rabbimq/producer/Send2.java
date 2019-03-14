@@ -1,6 +1,7 @@
 package baobei.cute.rabbimq.producer;
 
 import baobei.cute.rabbimq.config.RabbitMqConfig;
+import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.rabbit.support.CorrelationData;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,15 +11,27 @@ import javax.annotation.PostConstruct;
 import java.util.UUID;
 
 /**
- * Created by tangminyan on 2019/3/12.
+ * Created by tangminyan on 2019/3/14.
  */
 @Component
-public class Send implements RabbitTemplate.ConfirmCallback{
-    private RabbitTemplate rabbitTemplate;
+public class Send2 implements RabbitTemplate.ReturnCallback {
 
     @Autowired
-    public Send(RabbitTemplate rabbitTemplate) {
-        this.rabbitTemplate = rabbitTemplate;
+    private RabbitTemplate rabbitTemplate;
+
+    @PostConstruct
+    public void init() {
+        rabbitTemplate.setMandatory(true);
+        rabbitTemplate.setReturnCallback(this);
+    }
+
+    @Override
+    public void returnedMessage(Message message, int replyCode, String replyText, String exchange, String routingKey) {
+        System.out.println("消息主体 message : "+message);
+        System.out.println("消息主体 message : "+replyCode);
+        System.out.println("描述："+replyText);
+        System.out.println("消息使用的交换器 exchange : "+exchange);
+        System.out.println("消息使用的路由键 routing : "+routingKey);
     }
 
     public void sendMsg(String content) {
@@ -29,20 +42,5 @@ public class Send implements RabbitTemplate.ConfirmCallback{
     public void sendMsg(String exchange, String key, String content) {
         CorrelationData correlationData = new CorrelationData(UUID.randomUUID().toString());
         rabbitTemplate.convertAndSend(exchange, key, content, correlationData);
-    }
-
-    @PostConstruct
-    public void init() {
-        rabbitTemplate.setConfirmCallback(this);
-    }
-
-    @Override
-    public void confirm(CorrelationData correlationData, boolean ack, String cause) {
-        System.out.println("回调id：" + correlationData);
-        if(ack) {
-            System.out.println("消息成功消费");
-        } else {
-            System.out.println("消息消费失败：" + cause);
-        }
     }
 }

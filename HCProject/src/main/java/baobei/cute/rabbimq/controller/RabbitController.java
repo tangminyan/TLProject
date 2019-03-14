@@ -16,8 +16,20 @@ public class RabbitController {
     private RabbitService rabbitService;
 
     @RequestMapping(value = "/test", method = RequestMethod.POST)
-    public String createOrder(Integer orderId) {
+    public String createOrder() {
         rabbitService.testRabbit();
+        return "ok";
+    }
+
+    @RequestMapping(value = "/test2", method = RequestMethod.POST)
+    public String createOrder2() {
+        rabbitService.testRabbit2();
+        return "ok";
+    }
+
+    @RequestMapping(value = "/testMsg", method = RequestMethod.POST)
+    public String testMsg() {
+        rabbitService.testMessageBack();
         return "ok";
     }
 }

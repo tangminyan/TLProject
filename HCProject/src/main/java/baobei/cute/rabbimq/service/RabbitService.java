@@ -6,4 +6,8 @@ package baobei.cute.rabbimq.service;
 public interface RabbitService {
 
     void testRabbit();
+
+    void testRabbit2();
+
+    void testMessageBack();
 }

@@ -27,7 +27,7 @@ public class RedisController {
     public Order getData(@Param("id") Integer id) {
         String name = "order_" + id;
         Order order = orderRepository.findByOrderId(id);
-        redisTemplate.opsForValue().set(name, JSONObject.toJSONString(order), 20);
+        redisTemplate.opsForValue().set(name, JSONObject.toJSONString(order));
         System.out.println("若下面没出现“无缓存的时候调用”字样且能打印出数据表示测试成功");
         return order;
     }
