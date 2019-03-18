@@ -2,17 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="453f556a-b303-45e9-9d47-cf85ca07e46b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/baobei/cute/job/config/QuartzConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/baobei/cute/job/controller/JobController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/baobei/cute/job/task/QuartzMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/baobei/cute/job/task/QuartzScheduler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/baobei/cute/job/task/ScheduledTasks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/baobei/cute/job/task/SchedulerQuartzJob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/baobei/cute/job/task/TestQuartz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/baobei/cute/job/config/JobFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/baobei/cute/job/task/QuartzManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/baobei/cute/together/CandyHackerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baobei/cute/together/CandyHackerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/baobei/cute/together/CandyHackerApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/baobei/cute/together/CandyHackerApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/baobei/cute/job/config/QuartzConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baobei/cute/job/config/QuartzConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/baobei/cute/job/controller/JobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baobei/cute/job/controller/JobController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/baobei/cute/job/task/QuartzScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baobei/cute/job/task/SelfQuartzScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/baobei/cute/job/task/TestQuartz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/baobei/cute/redis/controller/RedisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baobei/cute/redis/controller/RedisController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/baobei/cute/job/config/QuartzConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/baobei/cute/job/config/QuartzConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/baobei/cute/job/controller/JobController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/baobei/cute/job/controller/JobController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/baobei/cute/job/task/QuartzScheduler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/baobei/cute/job/task/TestQuartz.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/baobei/cute/redis/controller/RedisController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Springboot项目搭建.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Springboot项目搭建.docx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -33,36 +35,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="103" column="21" lean-forward="true" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RabbitServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/rabbimq/service/impl/RabbitServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
+            <state>
               <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#446#447#0" expanded="true" />
-                <element signature="e#484#485#0" expanded="true" />
-                <element signature="e#622#623#0" expanded="true" />
-                <element signature="e#645#646#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestQuartz.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/task/TestQuartz.java">
+      <file leaf-file-name="QuartzConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/config/QuartzConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            <state relative-caret-position="1024">
+              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#826#827#0" expanded="true" />
+                <element signature="e#886#887#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RedisController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/redis/controller/RedisController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuartzManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/task/QuartzManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelfQuartzScheduler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/task/SelfQuartzScheduler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1408">
+              <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,8 +97,8 @@
       <file leaf-file-name="JobController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/controller/JobController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+            <state relative-caret-position="516">
+              <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,58 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuartzMain.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/task/QuartzMain.java">
+      <file leaf-file-name="JobFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/config/JobFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1011">
-              <caret line="40" column="28" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SchedulerQuartzJob.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/task/SchedulerQuartzJob.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuartzScheduler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/task/QuartzScheduler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="38" column="28" lean-forward="true" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#558#559#0" expanded="true" />
-                <element signature="e#593#594#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Scheduler.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/quartz-scheduler/quartz/2.3.0/quartz-2.3.0.jar!/org/quartz/Scheduler.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Send.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/rabbimq/producer/Send.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            <state relative-caret-position="243">
+              <caret line="10" column="10" selection-start-line="10" selection-end-line="29" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -175,6 +152,8 @@
       <find>spring.v</find>
       <find>scheduler</find>
       <find>current time is</find>
+      <find>QuartzScheduler</find>
+      <find>ChannelAwareMessageListener</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -221,7 +200,6 @@
         <option value="$PROJECT_DIR$/src/main/java/baobei/cute/rabbimq/RabbitMain.java" />
         <option value="$PROJECT_DIR$/src/main/java/baobei/cute/redis/config/RedisConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/baobei/cute/redis/controller/RedisController.java" />
         <option value="$PROJECT_DIR$/src/main/java/baobei/cute/rabbimq/service/RabbitService.java" />
         <option value="$PROJECT_DIR$/src/main/java/baobei/cute/rabbimq/producer/Send.java" />
         <option value="$PROJECT_DIR$/src/main/java/baobei/cute/rabbimq/controller/RabbitController.java" />
@@ -230,15 +208,18 @@
         <option value="$PROJECT_DIR$/src/main/java/baobei/cute/rabbimq/producer/Send2.java" />
         <option value="$PROJECT_DIR$/src/main/java/baobei/cute/job/task/ScheduledTasks.java" />
         <option value="$PROJECT_DIR$/src/main/java/baobei/cute/job/config/ScheduledConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/baobei/cute/job/task/SchedulerQuartzJob.java" />
-        <option value="$PROJECT_DIR$/src/main/java/baobei/cute/job/config/QuartzConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/baobei/cute/job/task/TestQuartz.java" />
         <option value="$PROJECT_DIR$/src/main/java/baobei/cute/together/CandyHackerApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/baobei/cute/job/task/QuartzScheduler.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/baobei/cute/job/controller/JobController.java" />
         <option value="$PROJECT_DIR$/src/main/java/baobei/cute/job/task/QuartzMain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/baobei/cute/job/task/QuartzScheduler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/baobei/cute/job/controller/JobController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/baobei/cute/job/task/SchedulerQuartzJob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/baobei/cute/job/task/SelfQuartzScheduler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/baobei/cute/job/task/QuartzManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/baobei/cute/job/config/JobFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/baobei/cute/job/config/QuartzConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/baobei/cute/redis/controller/RedisController.java" />
       </list>
     </option>
   </component>
@@ -258,11 +239,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="177" />
-    <option name="y" value="337" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="243" />
+    <option name="y" value="321" />
     <option name="width" value="1711" />
-    <option name="height" value="1039" />
+    <option name="height" value="894" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -271,6 +252,7 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -430,6 +412,38 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="baobei" type="462c0819:PsiDirectoryNode" />
               <item name="cute" type="462c0819:PsiDirectoryNode" />
+              <item name="redis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HCProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HCProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="baobei" type="462c0819:PsiDirectoryNode" />
+              <item name="cute" type="462c0819:PsiDirectoryNode" />
+              <item name="redis" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HCProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HCProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="baobei" type="462c0819:PsiDirectoryNode" />
+              <item name="cute" type="462c0819:PsiDirectoryNode" />
+              <item name="redis" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HCProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HCProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="baobei" type="462c0819:PsiDirectoryNode" />
+              <item name="cute" type="462c0819:PsiDirectoryNode" />
               <item name="statemachinedemo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -505,7 +519,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -537,7 +550,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.QuartzMain">
+  <component name="RunManager" selected="Spring Boot.CandyHackerApplication">
     <configuration name="QuartzMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="baobei.cute.job.task.QuartzMain" />
       <module name="candy.hacker.together" />
@@ -617,7 +630,8 @@
       <updated>1551405441348</updated>
       <workItem from="1551405443029" duration="5605000" />
       <workItem from="1552275382751" duration="49456000" />
-      <workItem from="1552525283757" duration="24240000" />
+      <workItem from="1552525283757" duration="28723000" />
+      <workItem from="1552874088677" duration="3071000" />
     </task>
     <servers />
   </component>
@@ -630,10 +644,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79301000" />
+    <option name="totallyTimeSpent" value="86855000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="177" y="337" width="1711" height="1039" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -648,7 +662,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.22004357" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.32135075" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32897604" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
@@ -660,7 +674,7 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="CheckStyle" order="7" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15445185" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1881663" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="BPMNPalette" order="3" />
@@ -700,7 +714,7 @@
       <window_info anchor="bottom" id="Version Control" order="15" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15458423" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1881663" />
       <window_info anchor="right" id="Database" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Web" order="7" side_tool="true" />
@@ -708,7 +722,7 @@
       <window_info anchor="right" id="Theme Preview" order="10" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" visible="true" weight="0.22004357" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.3191721" />
       <window_info anchor="right" id="Bean Validation" order="11" />
     </layout-to-restore>
   </component>
@@ -733,13 +747,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1536">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/together/CandyHackerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -754,9 +761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -771,9 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -819,9 +820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -854,13 +852,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
           <caret line="20" column="5" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
-            <element signature="e#748#749#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
-            <element signature="e#928#929#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -918,29 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/redis/controller/RedisController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/redis/config/RedisConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -954,16 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/rabbimq/producer/Send2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/rabbimq/service/RabbitService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -971,16 +929,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/config/ScheduledConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/config/ScheduledConfiguration.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/quartz-scheduler/quartz/1.8.4/quartz-1.8.4.jar!/org/quartz/Scheduler.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -995,28 +944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/config/QuartzConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/task/ScheduledTasks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
@@ -1028,9 +955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
           <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1038,6 +962,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/quartz-scheduler/quartz/2.3.0/quartz-2.3.0.jar!/org/quartz/Scheduler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3296">
+          <caret line="103" column="21" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/task/QuartzMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/task/TestQuartz.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/rabbimq/service/impl/RabbitServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/rabbimq/producer/Send2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1054,90 +1023,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/rabbimq/service/impl/RabbitServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/task/SchedulerQuartzJob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        <state relative-caret-position="383">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#446#447#0" expanded="true" />
-            <element signature="e#484#485#0" expanded="true" />
-            <element signature="e#622#623#0" expanded="true" />
-            <element signature="e#645#646#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/quartz-scheduler/quartz/2.3.0/quartz-2.3.0.jar!/org/quartz/Scheduler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="103" column="21" lean-forward="true" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/controller/JobController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        <state relative-caret-position="516">
+          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/task/SchedulerQuartzJob.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/task/ScheduledTasks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        <state relative-caret-position="345">
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/task/TestQuartz.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/task/QuartzManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="256">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/task/QuartzScheduler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/redis/config/RedisConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="38" column="28" lean-forward="true" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+        <state relative-caret-position="288">
+          <caret line="71" column="14" lean-forward="true" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/config/JobFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="243">
+          <caret line="10" column="10" selection-start-line="10" selection-end-line="29" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/task/QuartzMain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/config/QuartzConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1011">
-          <caret line="40" column="28" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="28" />
+        <state relative-caret-position="1024">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#886#887#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/job/task/SelfQuartzScheduler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1408">
+          <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/baobei/cute/redis/controller/RedisController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

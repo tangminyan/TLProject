@@ -1,6 +1,6 @@
 package baobei.cute.job.controller;
 
-import baobei.cute.job.task.QuartzScheduler;
+import baobei.cute.job.task.SelfQuartzScheduler;
 import org.quartz.SchedulerException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class JobController {
 
     @Autowired
-    private QuartzScheduler quartzScheduler;
+    private SelfQuartzScheduler quartzScheduler;
 
     @RequestMapping("/quartz")
     public void test() throws SchedulerException {

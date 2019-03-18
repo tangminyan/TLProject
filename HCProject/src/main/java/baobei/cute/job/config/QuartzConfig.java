@@ -1,35 +1,36 @@
 package baobei.cute.job.config;
 
-import baobei.cute.job.task.TestQuartz;
-import org.quartz.JobBuilder;
-import org.quartz.JobDetail;
-import org.quartz.SimpleScheduleBuilder;
-import org.quartz.Trigger;
-import org.quartz.TriggerBuilder;
+import org.quartz.Scheduler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 
 /**
  * Created by tangminyan on 2019/3/15.
  */
 @Configuration
-@EnableScheduling
 public class QuartzConfig {
-    @Bean
-    public JobDetail testQuartzDetail() {
-        return JobBuilder.newJob(TestQuartz.class).withIdentity("testQuartz").storeDurably().build();
+    private JobFactory jobFactory;
+
+    public QuartzConfig(JobFactory factory) {
+        this.jobFactory = factory;
     }
 
+    /**
+     * 配置SchedulerFactoryBean
+     *
+     * 将一个方法产生为Bean并交给Spring容器管理
+     */
     @Bean
-    public Trigger testQuartzTrigger() {
-        SimpleScheduleBuilder scheduleBuilder = SimpleScheduleBuilder.simpleSchedule()
-                .withIntervalInSeconds(1)
-                .repeatForever();
-        return TriggerBuilder.newTrigger().forJob(testQuartzDetail())
-                .withIdentity("testQuartz")
-                .withSchedule(scheduleBuilder)
-                .build();
+    public SchedulerFactoryBean schedulerFactoryBean() {
+        SchedulerFactoryBean factoryBean = new SchedulerFactoryBean();
+        factoryBean.setJobFactory(jobFactory);
+        return factoryBean;
+    }
+
+    @Bean(name = "scheduler")
+    public Scheduler scheduler() {
+        return schedulerFactoryBean().getScheduler();
     }
 }
 
