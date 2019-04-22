@@ -16,15 +16,18 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.crypto.password.StandardPasswordEncoder;
 import org.springframework.security.oauth2.provider.expression.OAuth2MethodSecurityExpressionHandler;
 
+
 /**
  * Created by tangminyan on 2019/3/19.
  */
+
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    private SelfUserDetailsService userDetailsService;
+    private SelfUserDetailsService selfUserDetailsService;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -33,12 +36,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
+        auth.userDetailsService(selfUserDetailsService).passwordEncoder(passwordEncoder());
     }
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/job");
+        web.ignoring().antMatchers("/hello");
         super.configure(web);
     }
 
@@ -56,6 +59,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         }
     }
 }
+
+
 
 
 

@@ -1,9 +1,10 @@
 package baobei.cute.oauth.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
 import org.springframework.security.oauth2.provider.token.TokenStore;
+import org.springframework.security.oauth2.provider.token.store.InMemoryTokenStore;
 import org.springframework.security.web.authentication.AbstractAuthenticationTargetUrlRequestHandler;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 import org.springframework.stereotype.Component;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+
 /**
  * 当退出系统时需要访问SpringSecrutiy的logout方法来清空对应的session信息，
  * 如果退出后改用户的access_token还依然存在那就危险了，
@@ -21,13 +23,18 @@ import java.io.IOException;
  *
  * Created by tangminyan on 2019/3/19.
  */
+
 @Component
 public class CustomLogoutSuccessHandler extends AbstractAuthenticationTargetUrlRequestHandler implements LogoutSuccessHandler {
     private static final String BEARER_AUTHENTICATION = "Bearer";
     private static final String HEADER_AUTHENTICATION = "authorization";
 
-    @Autowired
-    private TokenStore tokenStore;
+    @Bean
+    public TokenStore tokenStore() {
+        return new InMemoryTokenStore();
+    }
+
+    private TokenStore tokenStore = tokenStore();
 
     @Override
     public void onLogoutSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
@@ -40,6 +47,7 @@ public class CustomLogoutSuccessHandler extends AbstractAuthenticationTargetUrlR
         }
     }
 }
+
 
 
 

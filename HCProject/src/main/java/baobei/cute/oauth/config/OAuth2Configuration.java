@@ -6,9 +6,11 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 
+
 /**
  * Created by tangminyan on 2019/3/19.
  */
+
 @Configuration
 public class OAuth2Configuration {
 
@@ -23,10 +25,20 @@ public class OAuth2Configuration {
 
         @Override
         public void configure(HttpSecurity http) throws Exception {
-            super.configure(http);
+            http.exceptionHandling()
+            .authenticationEntryPoint(customAuthenticationEntryPoint)
+            .and()
+            .logout()
+            .logoutUrl("oauth/logout")
+            .logoutSuccessHandler(customLogoutSuccessHandler)
+            .and()
+            .authorizeRequests()
+            .antMatchers("/hello/").permitAll()
+            .antMatchers("/secure/**").authenticated();
         }
     }
 }
+
 
 
 

@@ -1,4 +1,4 @@
-package baobei.cute.together;
+package baobei;
 
 
 import org.springframework.boot.SpringApplication;
@@ -20,4 +20,14 @@ public class CandyHackerApplication {
     public static void main(String[] args) {
         SpringApplication.run(CandyHackerApplication.class, args);
     }
+
 }
+
+
+
+
+
+
+
+
+

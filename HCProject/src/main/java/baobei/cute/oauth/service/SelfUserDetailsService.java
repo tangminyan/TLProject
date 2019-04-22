@@ -4,12 +4,15 @@ import baobei.cute.oauth.dao.UserRepository;
 import baobei.cute.oauth.entity.Authority;
 import baobei.cute.oauth.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.ObjectUtils;
 
 import java.util.ArrayList;
@@ -23,11 +26,13 @@ import java.util.Collection;
  */
 @Service
 public class SelfUserDetailsService implements UserDetailsService {
+
     @Autowired
     private UserRepository userRepository;
 
     @Override
-    public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
+    @Transactional
+    public UserDetails loadUserByUsername(final String login) throws UsernameNotFoundException {
         String lowerCaseLogin = login.toLowerCase();
 
         User userFromDatabase = userRepository.findByUsernameCaseInsensitive(lowerCaseLogin);

@@ -10,11 +10,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+
 /**
  * 用来配置如果没有权限访问接口时我们返回的错误码以及错误内容
  *
  * Created by tangminyan on 2019/3/19.
  */
+
 @Component
 @Slf4j
 public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint {
@@ -25,6 +27,7 @@ public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint 
         httpServletResponse.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Access Denied");
     }
 }
+
 
 
 
