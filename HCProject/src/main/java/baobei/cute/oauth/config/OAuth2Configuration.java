@@ -33,7 +33,7 @@ public class OAuth2Configuration {
             .logoutSuccessHandler(customLogoutSuccessHandler)
             .and()
             .authorizeRequests()
-            .antMatchers("/hello/").permitAll()
+            .antMatchers("/").permitAll()
             .antMatchers("/secure/**").authenticated();
         }
     }

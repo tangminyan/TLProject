@@ -109,6 +109,12 @@
             <artifactId>druid</artifactId>
         </dependency>
 
+        <!--展示页面-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
 
 
         <dependency>

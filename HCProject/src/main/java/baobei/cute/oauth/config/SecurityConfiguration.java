@@ -29,16 +29,16 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     private SelfUserDetailsService selfUserDetailsService;
 
-    //配置匹配用户时密码规则
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new StandardPasswordEncoder();
-    }
+    //配置匹配用户时密码规则 加密的密码，现在去除加密
+//    @Bean
+//    public PasswordEncoder passwordEncoder() {
+//        return new StandardPasswordEncoder();
+//    }
 
     //配置全局设置
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(selfUserDetailsService).passwordEncoder(passwordEncoder());
+        auth.userDetailsService(selfUserDetailsService)/*.passwordEncoder(passwordEncoder())*/;
     }
 
     @Override
