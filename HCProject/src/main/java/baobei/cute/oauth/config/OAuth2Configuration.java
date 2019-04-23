@@ -15,7 +15,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 public class OAuth2Configuration {
 
     @Configuration
-    @EnableResourceServer
+    @EnableResourceServer //开启资源服务器
     protected static class ResourceServerConfiguration extends ResourceServerConfigurerAdapter {
         @Autowired
         private CustomAuthenticationEntryPoint customAuthenticationEntryPoint;

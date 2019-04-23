@@ -1,10 +1,9 @@
 package baobei.cute.oauth.config;
 
-import org.springframework.context.annotation.Bean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
 import org.springframework.security.oauth2.provider.token.TokenStore;
-import org.springframework.security.oauth2.provider.token.store.InMemoryTokenStore;
 import org.springframework.security.web.authentication.AbstractAuthenticationTargetUrlRequestHandler;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 import org.springframework.stereotype.Component;
@@ -29,12 +28,15 @@ public class CustomLogoutSuccessHandler extends AbstractAuthenticationTargetUrlR
     private static final String BEARER_AUTHENTICATION = "Bearer";
     private static final String HEADER_AUTHENTICATION = "authorization";
 
-    @Bean
-    public TokenStore tokenStore() {
-        return new InMemoryTokenStore();
-    }
+//    @Bean
+//    public TokenStore tokenStore() {
+//        return new InMemoryTokenStore();
+//    }
+//
+//    private TokenStore tokenStore = tokenStore();
 
-    private TokenStore tokenStore = tokenStore();
+    @Autowired
+    private TokenStore tokenStore;
 
     @Override
     public void onLogoutSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {

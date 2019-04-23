@@ -29,11 +29,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     private SelfUserDetailsService selfUserDetailsService;
 
+    //配置匹配用户时密码规则
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new StandardPasswordEncoder();
     }
 
+    //配置全局设置
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(selfUserDetailsService).passwordEncoder(passwordEncoder());
@@ -42,7 +44,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(WebSecurity web) throws Exception {
         web.ignoring().antMatchers("/hello");
-        super.configure(web);
     }
 
     @Override
@@ -51,6 +52,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         return super.authenticationManagerBean();
     }
 
+    //开启全局方法拦截
     @EnableGlobalMethodSecurity(prePostEnabled = true, jsr250Enabled = true)
     public static class GlobalSecurityExpressionHandler extends GlobalMethodSecurityConfiguration {
         @Override
